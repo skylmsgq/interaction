@@ -1,4 +1,4 @@
 interaction
 ===========
 
-the interactin of arduino / wechat / ckan
+the interactin of arduino / clan / wechat

@@ -1,0 +1,148 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #22262A;
+  color: #DDD;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  min-height: 640px;
+  min-width: 1024px;
+  /*max-width: 1280px;
+  max-height: 768px;*/
+}
+
+.show {
+  margin-right: 100px;
+  text-align: center;
+}
+
+.head{
+  margin-top: 5%;
+  margin-bottom: 30px;
+}
+span {
+  font-size: 270%;
+}
+.word {
+  letter-spacing: 3px;
+}
+.you {
+  cursor: pointer;
+  font-size: 340%;
+  letter-spacing: 5px;
+  color: #DA5D5D;
+}
+
+.progress-container, .progress {
+  border-radius: 10px;
+}
+
+.progress-container {
+  width: 22%;
+  height: 450px;
+  margin-top: 120px;
+  border: solid 1px #111;
+  background: #151515;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.progress-container.done {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 2px #0c8112;
+}
+.progress-container.done .progress {
+  background: #0f9816;
+}
+.progress-container.done .progress-overlay {
+  display: none;
+}
+
+.progress, .progress-overlay {
+  position: absolute;
+}
+
+.progress {
+  width: 100%;
+  height: 0%;
+  background: rgba(17, 75, 176, 0.9);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  z-index: 1;
+  bottom: 0;
+  color: #151515;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+  transition: background 250ms ease;
+}
+
+@keyframes uploadarrow {
+  0% {
+    bottom: 0%;
+    border-bottom-color: rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    bottom: 100%;
+    border-bottom-color: rgba(255, 255, 255, 0);
+  }
+}
+@-webkit-keyframes uploadarrow {
+  0% {
+    bottom: 0%;
+    border-bottom-color: rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    bottom: 100%;
+    border-bottom-color: rgba(255, 255, 255, 0);
+  }
+}
+.progress-overlay {
+  z-index: 2;
+  left: 30%;
+  width: 40%;
+  height: 100%;
+  bottom: 0;
+  border: solid 20px transparent;
+  border-width: 0 25px 20px 25px;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  -webkit-animation: uploadarrow 1200ms infinite ease-out;
+  -moz-animation: uploadarrow 1200ms infinite linear;
+  -o-animation: uploadarrow 1200ms infinite linear;
+  animation: uploadarrow 1200ms infinite linear;
+}
+.guide {
+  float: right;
+  margin-left: 50px;
+  margin-right: 14%;
+}
+.guide h1 {
+  color: #E6E2E1;
+  margin-left: 120px;
+  font-size: 240%;
+}
+.guide img{
+  text-align: center;
+  margin-left: 75px;
+  width: 270px;
+  margin-bottom: 10px;
+}
+.guide h4 {
+  font-size: 125%;
+}
+.guide ul li {
+  line-height: 1.2;
+}
