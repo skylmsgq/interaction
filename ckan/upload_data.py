@@ -37,8 +37,9 @@ result.append(item)
 # call the datastore_upsert() to insert data
 
 air=[{
-    'time':'2014-10-06 15:54',
-    'pm2.5':'40'
+    'pm2.5':40,
+    'humidity':55,
+    'temperature':27
     #"time": time.strftime('%Y-%m-%d %H:%M:%S' ,time.localtime(time.time()))
 }];
 datastore_upsert(resource_id, air, api_key)

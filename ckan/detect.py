@@ -13,10 +13,10 @@ count = 1
 resource_dict = {
         # "sql": "select * from d97626a1-6b41-45f5-8f3f-7420f9d60d3c"
     	"resource_id": "d97626a1-6b41-45f5-8f3f-7420f9d60d3c",
-    	"limit": 10000,
-        "fields": ["pm2.5"],
+    	"limit": 1,
+        #"fields": ["pm2.5"],
         #"offset": offset,
-        #"sort": "time desc, 颗粒物浓度",
+        "sort": "_id desc",
     	#"filters": {"OpenID": "o9ZxcuIUTEacTCK6YQLURv-Jg5RM"}
 	}
 
@@ -32,16 +32,14 @@ while True:
     response_dict = json.loads(response.read())
     assert response_dict['success'] is True
     records_dict = response_dict['result']['records']
-    total_num = len(records_dict)
-    pm25 = records_dict[total_num-1]
-
-    for key in pm25:
-        aqi = pm25[key]
+    pm25 = records_dict[0]
+ 
+    aqi=pm25['pm2.5']
 
     print count,aqi
 
     # aqi threshold
-    if int(aqi) > 1 and alarm:
+    if int(aqi)>100 and alarm:
     	alarm = False
     	# make a POST to OMNILab_wechat
     	cj=cookielib.LWPCookieJar()
@@ -68,9 +66,9 @@ while True:
     	#print token['ErrMsg'][44:]
     	index = token['redirect_url'].find('token')
     	print index
-    	token=token['redirect_url'][44:]
+    	token=token['redirect_url'][44:] 
     	print token
-    	paras2={'type':'1','content':'颗粒物浓度已经超标，请引起重视！','error':'false','imgcode':'','tofakeid':'2376661902','token':token,'ajax':'1'}# content为你推送的信息，tofakeid为用户的唯一标示id，可在html代码里找到
+    	paras2={'type':'1','content':'颗粒物浓度已经超标，请引起重视！','error':'false','imgcode':'','tofakeid':'51375040','token':token,'ajax':'1'}# content为你推送的信息，tofakeid为用户的唯一标示id，可在html代码里找到
     	req2=urllib2.Request('https://mp.weixin.qq.com/cgi-bin/singlesend?t=ajax-response&lang=zh_CN',urllib.urlencode(paras2))
     	req2.add_header('Accept','*/*')
     	req2.add_header('Accept-Encoding','gzip,deflate,sdch')
@@ -87,7 +85,7 @@ while True:
     	ret2=urllib2.urlopen(req2)
     	#ret2=opener.open(req2)
     	print 'x',ret2.read()
-
+    
     count += 1
 
     time.sleep(0.3)

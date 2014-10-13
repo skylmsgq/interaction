@@ -26,7 +26,7 @@ def datastore_create(resource_id,api_key):
     	"resource_id": resource_id,
     	"force": True,
     	#"fields": [{"id": "author", "type": "text"}, {"id": "submitted_on", "type": "timestamp"}, {"id": "PM2_5", "type": "float"}, {"id": "CO", "type": "float"}, {"id": "PM10", "type": "float"}, {"id": "SO2", "type": "float"}, {"id": "O3", "type": "float"}, {"id": "NO2", "type": "float"}],
-    	"fields": [{"id": "OpenID", "type":"text"},{"id": "time", "type": "text"}],
+    	"fields": [{"id": "pm2.5", "type":"float"},{"id": "humidity", "type": "float"},{"id": "temperature", "type": "float"}],
     	#"records": records,
     	# 'resource': resource,
     	# 'aliases': ['author', 'submitted_on', 'PM2_5', 'CO', 'PM10', 'SO2', 'O3', 'NO2'],
