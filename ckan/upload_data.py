@@ -5,7 +5,7 @@ import time
 
 
 # your resource_id and api_key
-resource_id = 'd97626a1-6b41-45f5-8f3f-7420f9d60d3c'
+resource_id = '03cf1c90-dc2e-44ad-9a6a-e5862fdfd57a'
 api_key = '954c00c0-b01a-4863-a75b-1ed238d38f35'
 
 # data to transfer
@@ -42,4 +42,9 @@ air=[{
     'temperature':27
     #"time": time.strftime('%Y-%m-%d %H:%M:%S' ,time.localtime(time.time()))
 }];
-datastore_upsert(resource_id, air, api_key)
+zan=[{
+    "OpenID": "1",
+    "datetime": "2014-10-14 21:59:00",
+}]
+
+datastore_upsert(resource_id, zan, api_key)
