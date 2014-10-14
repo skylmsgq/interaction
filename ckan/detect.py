@@ -34,20 +34,20 @@ while True:
     records_dict = response_dict['result']['records']
     pm25 = records_dict[0]
 
-    aqi=pm25['pm2.5']
+    aqi = pm25['pm2.5']
 
     print count,aqi
 
     # aqi threshold
-    if int(aqi)>100 and alarm:
+    if ( ( int(aqi) > 100 ) and alarm ):
         alarm = False
         # make a POST to OMNILab_wechat
-        cj=cookielib.LWPCookieJar()
-        opener=urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+        cj = cookielib.LWPCookieJar()
+        opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
         urllib2.install_opener(opener)
         #登陆
-        paras={'username':'weixin@omnilab.sjtu.edu.cn','pwd':'d59c47ce5f40949fb4f4689f3d37c203','imgcode':'','f':'json'}
-        req=urllib2.Request('https://mp.weixin.qq.com/cgi-bin/login?lang=zh_CN',urllib.urlencode(paras))
+        paras = {'username':'weixin@omnilab.sjtu.edu.cn','pwd':'d59c47ce5f40949fb4f4689f3d37c203','imgcode':'','f':'json'}
+        req = urllib2.Request('https://mp.weixin.qq.com/cgi-bin/login?lang=zh_CN',urllib.urlencode(paras))
         req.add_header('Accept','application/json, text/javascript, */*; q=0.01')
         req.add_header('Accept-Encoding','gzip,deflate,sdch')
         req.add_header('Accept-Language','zh-CN,zh;q=0.8')
@@ -59,17 +59,17 @@ while True:
         req.add_header('Referer','https://mp.weixin.qq.com/cgi-bin/loginpage?t=wxm2-login&lang=zh_CN')
         req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.76 Safari/537.36')
         req.add_header('X-Requested-With','XMLHttpRequest')
-        ret=urllib2.urlopen(req)
-        retread=ret.read()
+        ret = urllib2.urlopen(req)
+        retread = ret.read()
         print retread
-        token=json.loads(retread)
-        #print token['ErrMsg'][44:]
+        token = json.loads(retread)
+        # print token['ErrMsg'][44:]
         index = token['redirect_url'].find('token')
         print index
-        token=token['redirect_url'][44:]
+        token = token['redirect_url'][44:]
         print token
-        paras2={'type':'1','content':'颗粒物浓度已经超标，请引起重视！','error':'false','imgcode':'','tofakeid':'51375040','token':token,'ajax':'1'}# content为你推送的信息，tofakeid为用户的唯一标示id，可在html代码里找到
-        req2=urllib2.Request('https://mp.weixin.qq.com/cgi-bin/singlesend?t=ajax-response&lang=zh_CN',urllib.urlencode(paras2))
+        paras2 = {'type':'1','content':'颗粒物浓度已经超标，请引起重视！','error':'false','imgcode':'','tofakeid':'51375040','token':token,'ajax':'1'}# content为你推送的信息，tofakeid为用户的唯一标示id，可在html代码里找到
+        req2 = urllib2.Request('https://mp.weixin.qq.com/cgi-bin/singlesend?t=ajax-response&lang=zh_CN',urllib.urlencode(paras2))
         req2.add_header('Accept','*/*')
         req2.add_header('Accept-Encoding','gzip,deflate,sdch')
         req2.add_header('Accept-Language','zh-CN,zh;q=0.8')
@@ -82,10 +82,10 @@ while True:
         req2.add_header('X-Requested-With','XMLHttpRequest')
         #不加cookie也可发送
         #req2.add_header('Cookie',cookie2)
-        ret2=urllib2.urlopen(req2)
+        ret2 = urllib2.urlopen(req2)
         #ret2=opener.open(req2)
-        print 'x',ret2.read()
+        print 'x', ret2.read()
 
     count += 1
 
-    time.sleep(0.3)
+    time.sleep(1)
