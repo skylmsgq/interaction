@@ -3,12 +3,12 @@
 #include "DHT22.h"
 #include  <Wire.h>
 #include  <Adafruit_GFX.h>
-#define true True
+//#define true True
 
 
 //定义传感器对象
 DHT22                 DHT(7); 
-CO2MG                co2(0);
+//CO2MG                co2(0);
 Dust                 dust(0,6);
 
 
@@ -20,7 +20,7 @@ long previousMillis3 = 0;
 
 int  interval1=10;  //4
 int  interval2=700;  //500
-int  interval3=10000;  //10000
+int  interval3=1000;  //10000
 
 unsigned long currentMillis;
 
@@ -31,7 +31,7 @@ char value[4];
 double dustDensity =0 ;
 double temperature=0;
 double humidity=0;
-double co2density=0;
+//double co2density=0;
 
 
 //定义ajson数据转换函数
@@ -55,15 +55,15 @@ aJsonObject *add_humidity(aJsonObject* msg,float value)
 
 aJsonObject *add_pm25(aJsonObject* msg,float value)
 {
-  aJson.addNumberToObject(msg,"pm2_5",value);
+  aJson.addNumberToObject(msg,"pm2.5",value);
   return msg;
 }	
 	
-aJsonObject *add_CO2(aJsonObject* msg,float value)
-{
-  aJson.addNumberToObject(msg,"co2",value);
-  return msg;
-}
+//aJsonObject *add_CO2(aJsonObject* msg,float value)
+//{
+//  aJson.addNumberToObject(msg,"co2",value);
+//  return msg;
+//}
 
  aJsonObject *add_text(aJsonObject* msg,char* key,char* value)
 {
@@ -145,7 +145,7 @@ void loop()
  
     humidity  =DHT.getHum();
   
-    co2density  =co2.getCO2();
+//    co2density  =co2.getCO2();
 
  }
 
@@ -173,17 +173,17 @@ void loop()
     add_temperature(guid, temperature);
     add_humidity(guid, humidity);      
     //there is limitation of our CO2 sensor, which is 400ppm
-    if (co2density ==-1)
-      add_text(msg,"CO2","< 400ppm");
-    else
-      {
-        add_CO2(msg,co2density);
-        add_CO2(guid,co2density);;
-      } 
-   char* api = "7b53bb81-195c-477c-8513-b6a7d7bad0d3";
-   //char* api = "954c00c0-b01a-4863-a75b-1ed238d38f35";
-   char* resource = "1f913a7d-b254-442d-9b0b-b54d1486acd0";
-   //char* resource = "d97626a1-6b41-45f5-8f3f-7420f9d60d3c";
+//    if (co2density ==-1)
+//      add_text(msg,"CO2","< 400ppm");
+//    else
+//      {
+//        add_CO2(msg,co2density);
+//        add_CO2(guid,co2density);;
+//      } 
+//   char* api = "7b53bb81-195c-477c-8513-b6a7d7bad0d3";
+//   char* resource = "1f913a7d-b254-442d-9b0b-b54d1486acd0";
+   char* api = "954c00c0-b01a-4863-a75b-1ed238d38f35";
+   char* resource = "d97626a1-6b41-45f5-8f3f-7420f9d60d3c";
    //post the data
    
     root = send_to_ckan(resource,data);

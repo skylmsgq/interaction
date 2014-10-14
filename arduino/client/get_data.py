@@ -7,14 +7,14 @@ import pprint
 def set_request(data_id, api_key, key_world):
     resource_dict = {
         "resource_id": data_id,
-        "limit": 100000,
+        "limit": 1000,
         "fields": key_world,
     }
     data_dict = urllib.quote(json.dumps(resource_dict))
 
     request = urllib2.Request('http://202.121.178.242/api/3/action/datastore_search')
     request.add_header('Authorization', api_key)
-    
+
     data_infor = []
     data_infor.append(request)
     data_infor.append(data_dict)
@@ -36,13 +36,12 @@ def from_ckan(data_infor, choise):
         if length >= 1:
             result = response_dict['result']['records'][length -1]
             for key in result:
-                value = int(result[key])
+                value = float(result[key])
         else:
             value = 0
     else:
-        value = length
-
-    return value * 10
+        value = length*5
+    return value
 
 def send_serial(aqi_value, counts, threshold):
     #set serial flag
@@ -55,7 +54,7 @@ def send_serial(aqi_value, counts, threshold):
                 set_flag = 'F'
             else:
                 for value in flag_tab:
-                    set_flag = flag_tab[ counts / 10 ]
+                    set_flag = flag_tab[ int(counts / 10 ) ]
         else:
             set_flag = 'Y'
     else:
