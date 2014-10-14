@@ -30,7 +30,7 @@ token=json.loads(retread)
 #print token['ErrMsg'][44:]
 index = token['redirect_url'].find('token')
 print index
-token=token['redirect_url'][44:] 
+token=token['redirect_url'][44:]
 print token
 
 
