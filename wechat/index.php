@@ -170,7 +170,7 @@ class wechatCallbackapiTest
                             $eventKey = trim($postObj->EventKey);
                             if($eventKey == 'join_us'){
                                 $resultStr = sprintf($webTplHead, $fromUsername, $toUsername, $time, "news", 1);
-                                $resultStr .= sprintf($webTplBody, "集赞总动员","加入我们，为环保点赞", "http://omnilabwechat.sinaapp.com/join/img/top.jpg", "http://omnilabwechat.sinaapp.com/join/join.php?openid=$fromUsername");
+                                $resultStr .= sprintf($webTplBody, "集赞总动员","加入我们，为环保点赞", "http://omnilabwechat.sinaapp.com/join/img/csw.jpg", "http://omnilabwechat.sinaapp.com/join/join.php?openid=$fromUsername");
                                 $resultStr .= $webTplFoot;
                                 echo $resultStr;
                             } 
@@ -207,7 +207,7 @@ class wechatCallbackapiTest
     }
 
     public function simsim($keyword){
-        $key="51450af1-57bc-4b49-a5f6-2b9e9e87d6b6";
+        $key="09a78f17-c455-4422-90b6-efda56ac8d71";
         $url_simsimi="http://sandbox.api.simsimi.com/request.p?key=".$key."&lc=ch&ft=0.0&text=".$keyword;
         $json=file_get_contents($url_simsimi);
         $result=json_decode($json,true);

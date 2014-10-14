@@ -22,6 +22,10 @@ p {
 	padding-left: 30px;
 	padding-top: 10px;
 	padding-bottom: 20px;
+	background-color: #ddd;
+	position: relative;
+	top: -10px;
+	padding-top: 15px;
 }
 #info img {
 	width: 12px;
@@ -29,7 +33,4 @@ p {
 }
 #info span {
 	color: #3f3f88;
-}
-#openid {
-	display: none;
 }
