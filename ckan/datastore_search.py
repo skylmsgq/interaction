@@ -28,3 +28,4 @@ response_dict = json.loads(response.read())
 assert response_dict["success"] is True
 records_dict = response_dict["result"]["records"]
 print records_dict[0]
+print json.dumps(records_dict[0], ensure_ascii=False)

@@ -6,7 +6,7 @@ import json
 import pprint
 
 resource_dict = {
-        "resource_id": "d97626a1-6b41-45f5-8f3f-7420f9d60d3c",
+        "resource_id": "03cf1c90-dc2e-44ad-9a6a-e5862fdfd57a",
         "force": True,
         # "filters": {"pm2.5": "201"}
     }

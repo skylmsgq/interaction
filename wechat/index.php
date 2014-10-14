@@ -1,5 +1,5 @@
 <?php
-header("Content-type:text/html;charset=gbk");
+header("Content-type:text/html;charset=utf8");
 //define your token
 define("TOKEN", "omnilab");
 date_default_timezone_set(PRC);
@@ -10,7 +10,7 @@ $wechatObj->responseMsg();
 
 
 class wechatCallbackapiTest
-{   
+{
     public function valid()
     {
         $echoStr = $_GET["echostr"];
@@ -28,18 +28,18 @@ class wechatCallbackapiTest
         if (!defined("TOKEN")) {
             throw new Exception('TOKEN is not defined!');
         }
-        
+
         $signature = $_GET["signature"];
         $timestamp = $_GET["timestamp"];
         $nonce = $_GET["nonce"];
-                
+
         $token = TOKEN;
         $tmpArr = array($token, $timestamp, $nonce);
         // use SORT_STRING rule
         sort($tmpArr, SORT_STRING);
         $tmpStr = implode( $tmpArr );
         $tmpStr = sha1( $tmpStr );
-        
+
         if( $tmpStr == $signature ){
             return true;
         }else{
@@ -54,16 +54,16 @@ class wechatCallbackapiTest
         if (!empty($postStr)){
             libxml_disable_entity_loader(true);
             $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-            
+
             $fromUsername = $postObj->FromUserName;
             $toUsername = $postObj->ToUserName;
             $time = time();
             $msgType = $postObj->MsgType;
 
             $first = true;
-            
+
             //$mysql = new SaeMysql();
-            
+
             $textTpl = "<xml>
             <ToUserName><![CDATA[%s]]></ToUserName>
             <FromUserName><![CDATA[%s]]></FromUserName>
@@ -71,7 +71,7 @@ class wechatCallbackapiTest
             <MsgType><![CDATA[%s]]></MsgType>
             <Content><![CDATA[%s]]></Content>
             <FuncFlag>0</FuncFlag>
-            </xml>"; 
+            </xml>";
             $webTplHead = "<xml>
             <ToUserName><![CDATA[%s]]></ToUserName>
             <FromUserName><![CDATA[%s]]></FromUserName>
@@ -80,15 +80,15 @@ class wechatCallbackapiTest
             <ArticleCount>%d</ArticleCount>
             <Articles>";
             $webTplBody = "<item>
-            <Title><![CDATA[%s]]></Title> 
+            <Title><![CDATA[%s]]></Title>
             <Description><![CDATA[%s]]></Description>
             <PicUrl><![CDATA[%s]]></PicUrl>
             <Url><![CDATA[%s]]></Url>
             </item>";
             $webTplFoot = "</Articles>
             <FuncFlag>0</FuncFlag>
-            </xml>";       
-            
+            </xml>";
+
             switch ($msgType){
                 case 'text':
                     $keyword = trim($postObj->Content);
@@ -118,7 +118,7 @@ class wechatCallbackapiTest
                         }
                     }else{
                         $contentStr = $this->simsim($keyword);
-                    }               
+                    }
                     $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, "text", $contentStr);
                     echo $resultStr;
 
@@ -173,7 +173,7 @@ class wechatCallbackapiTest
                                 $resultStr .= sprintf($webTplBody, "集赞总动员","加入我们，为环保点赞", "http://202.120.58.116/omnilab/join/img/csw.jpg", "http://202.120.58.116/omnilab/join/join.php?openid=$fromUsername");
                                 $resultStr .= $webTplFoot;
                                 echo $resultStr;
-                            } 
+                            }
                             break;
 
                         default:
@@ -182,15 +182,15 @@ class wechatCallbackapiTest
                     break;
 
                 case 'image':
-                    break;   
+                    break;
 
                 case 'voice':
                     break;
 
                 case 'video':
-                    break;  
+                    break;
 
-                case 'location':  
+                case 'location':
                     break;
 
                 case 'link':
@@ -202,7 +202,7 @@ class wechatCallbackapiTest
             //$mysql->closeDb();
 
         }else {
-            
+
         }
     }
 
