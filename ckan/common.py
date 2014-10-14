@@ -1,7 +1,7 @@
 #-*- coding:utf-8 -*-
 
-import urllib2
 import urllib
+import urllib2
 import json
 import pprint
 
@@ -12,7 +12,7 @@ def fun_exe(resource_dict,fun_name,api_key):
     request.add_header('Authorization', api_key)
 
     response = urllib2.urlopen(request, data_dict, timeout = 10)
-        #print response.read()
+    # print response.read()
     assert response.code == 200
 
     response_dict = json.loads(response.read())

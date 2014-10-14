@@ -8,7 +8,7 @@ import pprint
 resource_dict = {
         "resource_id": "d97626a1-6b41-45f5-8f3f-7420f9d60d3c",
         "force": True,
-        #"filters": {"pm2.5": "201"}
+        # "filters": {"pm2.5": "201"}
     }
 
 data_dict = urllib.quote(json.dumps(resource_dict))

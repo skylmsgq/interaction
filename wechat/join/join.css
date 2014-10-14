@@ -1,39 +1,39 @@
 body, html {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 h2 {
-	text-align: center;
-	padding-top: 5px;
-	padding-left: 20px;
-	padding-right: 20px;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 p {
-	padding-left: 30px; 
-	padding-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 #img1 {
-	width: 100%;
+    width: 100%;
 }
 #info {
-	font-size: 80%;
-	padding-left: 30px;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	background-color: #ddd;
-	position: relative;
-	top: -10px;
-	padding-top: 15px;
+    font-size: 80%;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #ddd;
+    position: relative;
+    top: -10px;
+    padding-top: 15px;
 }
 #info img {
-	width: 12px;
-	padding-right: 8px;
+    width: 12px;
+    padding-right: 8px;
 }
 #info span {
-	color: #3f3f88;
+    color: #3f3f88;
 }
 #openid {
-	display: none;
+    display: none;
 }
