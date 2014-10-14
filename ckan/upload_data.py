@@ -10,19 +10,19 @@ api_key = '954c00c0-b01a-4863-a75b-1ed238d38f35'
 
 # data to transfer
 data = [{"GPS":{
-				"GPS_TIME":"2014-09-19 13:57:51",
-				"LATITUDE":31.02647,
-     			"SPEED":0.147,
-     			"LONTITUDE":121.432101767,
-     			"HEIGHT":62.9
-     			},
-			"DATA":{
-				"SENSOR_TYPE": 0,
-				"SENSOR_ID":"af18d284-3c8c-5442-ef9e-217e8ec77853",
-				"SENSOR_VALUE":"[be ef be ef]"
-				},
-			"BOARD_TIME":"2014-09-05 13:58:00",
-			"DEVICE_ID":"71178bf0-54e4-4e10-a2e0-6103f70621e8"}]
+                "GPS_TIME":"2014-09-19 13:57:51",
+                "LATITUDE":31.02647,
+                 "SPEED":0.147,
+                 "LONTITUDE":121.432101767,
+                 "HEIGHT":62.9
+                 },
+            "DATA":{
+                "SENSOR_TYPE": 0,
+                "SENSOR_ID":"af18d284-3c8c-5442-ef9e-217e8ec77853",
+                "SENSOR_VALUE":"[be ef be ef]"
+                },
+            "BOARD_TIME":"2014-09-05 13:58:00",
+            "DEVICE_ID":"71178bf0-54e4-4e10-a2e0-6103f70621e8"}]
 
 result = []
 item = {}
