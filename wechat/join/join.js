@@ -13,7 +13,7 @@ $(document).ready(function(){
 				error: function(){
 					alert('something is wrong');
 				},
-				success: function(data){
+				success: function(){
 					count = $('#zan').text();
 					$('#zan').text(parseInt(count)+1);
 				}

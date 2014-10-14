@@ -34,3 +34,6 @@ p {
 #info span {
 	color: #3f3f88;
 }
+#openid {
+	display: none;
+}
