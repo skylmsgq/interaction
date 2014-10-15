@@ -34,7 +34,7 @@ token = token['redirect_url'][44:]
 print token
 
 
-paras2 = {'type':'1','content':'富美','error':'false','imgcode':'','tofakeid':'51375040','token':token,'ajax':'1'}# content为你推送的信息，tofakeid为用户的唯一标示id，可在html代码里找到
+paras2 = {'type':'1','content':'空气中颗粒物浓度已超标！','error':'false','imgcode':'','tofakeid':'2376661902','token':token,'ajax':'1'}# content为你推送的信息，tofakeid为用户的唯一标示id，可在html代码里找到
 req2 = urllib2.Request('https://mp.weixin.qq.com/cgi-bin/singlesend?t=ajax-response&lang=zh_CN',urllib.urlencode(paras2))
 req2.add_header('Accept','*/*')
 req2.add_header('Accept-Encoding','gzip,deflate,sdch')

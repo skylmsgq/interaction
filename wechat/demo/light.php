@@ -11,7 +11,5 @@ $stream_context = stream_context_create( $context );
 $data = json_decode( file_get_contents( $remote_server, FALSE, $stream_context ), true );
 $result = $data['result']['records'];
 $zan = count( $result );
-echo json_encode( array(
-		'count' => $zan )
-);
+echo json_encode( array( 'count' => $zan ) );
 ?>

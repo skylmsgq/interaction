@@ -1,4 +1,4 @@
-Interaction with Ckan
+interaction with ckan
 说明：
 1. common.py中为三个基本函数，datastore_create, datastore_upsert, url_update, 如果需要创建datastore, 请修改datastore_create里面的fields；
 2. datastore_delete用于清除数据，仅用于demo前无用数据的清除，注意根据需要决定是否加filters；
