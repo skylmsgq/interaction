@@ -170,7 +170,7 @@ class wechatCallbackapiTest
                             $eventKey = trim($postObj->EventKey);
                             if($eventKey == 'join_us'){
                                 $resultStr = sprintf($webTplHead, $fromUsername, $toUsername, $time, "news", 1);
-                                $resultStr .= sprintf($webTplBody, "集赞总动员","加入我们，为环保点赞", "http://202.120.58.116/interaction/wechat/join/img/csw.jpg", "http://202.120.58.116/interaction/wechat/join/join.php?openid=$fromUsername");
+                                $resultStr .= sprintf($webTplBody, "集赞总动员","加入我们，为环保点赞", "http://202.120.58.116/interaction/wechat/join/img/top.jpg", "http://202.120.58.116/interaction/wechat/join/join.php?openid=$fromUsername");
                                 $resultStr .= $webTplFoot;
                                 echo $resultStr;
                             }
