@@ -122,6 +122,7 @@ span {
     float: right;
     width: 50%;
     position: relative;
+    text-align: center;
     top: -20px;
 }
 .guide h1 {
@@ -133,7 +134,7 @@ span {
 .guide img {
     text-align: center;
     margin-left: 0px;
-    width: 82%;
+    width: 500px;
     margin-bottom: 10px;
 }
 .guide h3 {
