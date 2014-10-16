@@ -2,7 +2,7 @@ var count = '';
 var red = 0,
     green = 0,
     blue = 0;
-var airShow = true;
+var airShow = false;
 var humidity = 0,
     pm = 0;
 
@@ -18,7 +18,9 @@ $(document).ready(function() {
                 success: function(data) {
                     humidity = parseInt(data['humidity']);
                     pm = parseInt(data['pm']);
-                    if (pm > 300) pm = 300;
+                    //humidity = 50;
+                    //pm = 50;
+                    if (pm > 500) pm = 500;
                     $('#humidity span').text(humidity);
                     $('#pm span').text(pm);
                     $('#humidityProgress').text(humidity);
@@ -28,7 +30,7 @@ $(document).ready(function() {
                     });
                     $('#humidityProgress').css('background-color', 'rgb(17, ' + (155 - humidity) + ', 176)');
                     $('#pmProgress').animate({
-                        height: pm / 3 + "%"
+                        height: pm / 5 + "%"
                     });
                     if (pm > 0 & pm < 51) {
                         $('#pmProgress').css('background-color', '#54F861');
