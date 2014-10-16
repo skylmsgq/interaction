@@ -24,6 +24,16 @@ body {
     /*max-width: 1280px;
   max-height: 768px;*/
 }
+#kexueguan {
+    float: left;
+    width: 200px;
+}
+#ieaci{
+    width: 200px;
+}
+#kexuejia {
+    width: 200px;
+}
 .show {
     float: left;
     margin-left: 5%;
