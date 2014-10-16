@@ -24,26 +24,12 @@ body {
     /*max-width: 1280px;
   max-height: 768px;*/
 }
-#kexueguan {
-    float: left;
-    width: 200px;
-}
-#ieaci{
-    width: 200px;
-}
-#kexuejia {
-    width: 200px;
-}
 .show {
     float: left;
-    margin-left: 5%;
-    margin-top: 5%;
-    margin-right: 3%;
-    text-align: center;
+    width: 50%;
 }
 .head {
-    margin-top: 5%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 span {
     font-size: 270%;
@@ -61,8 +47,8 @@ span {
     border-radius: 10px;
 }
 .progress-container {
-    width: 220px;
-    height: 560px;
+    width: 28%;
+    height: 570px;
     margin-top: 10px;
     border: solid 1px #111;
     background: #151515;
@@ -134,39 +120,46 @@ span {
 }
 .guide {
     float: right;
-    margin-left: 3%;
-    margin-top: 5%;
-    margin-right: 5%;
+    width: 50%;
+    position: relative;
+    top: -20px;
 }
 .guide h1 {
     color: #E6E2E1;
-    margin-left: 100px;
+    margin-left: 30px;
     font-size: 300%;
+    margin-bottom: 20px;
 }
 .guide img {
     text-align: center;
     margin-left: 0px;
-    width: 400px;
+    width: 82%;
     margin-bottom: 10px;
 }
 .guide h3 {
+    text-align: left;
     font-size: 125%;
 }
 .guide ul li {
+    text-align: left;
     font-size: 20px;
     line-height: 1.2;
 }
 #light {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     display: none;
+    text-align: center;
 }
 #air {
-    margin-top: 10%;
+    margin-top: 6%;
     margin-left: 16%;
     margin-right: 12%;
 }
 #air .progress-container {
-    width: 100px;
-    height: 400px;
+    width: 25%;
+    height: 430px;
     text-align: center;
 }
 #air h1 {
@@ -183,14 +176,25 @@ span {
     margin-right: 20px;
 }
 #humidity {
+    width: 50%;
     float: right;
 }
 #humidity h1 {
     margin-left: 40px;
 }
 #pm {
+    width: 50%;
     float: left;
 }
 #pm h1 {
     margin-left: 40px;
+}
+.logos {
+    text-align: center;
+    position: relative;
+    top: 70px;
+}
+.logos img{
+    width: 18%;
+    margin: 15px;
 }
