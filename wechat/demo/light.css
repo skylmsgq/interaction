@@ -34,6 +34,9 @@ body {
 #kexuejia {
     width: 200px;
 }
+#csw {
+    width: 200px;
+}
 .show {
     float: left;
     width: 50%;
@@ -152,7 +155,7 @@ span {
     font-size: 125%;
 }
 .guide ul {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 .guide ul li {
     text-align: left;
@@ -167,13 +170,13 @@ span {
     text-align: center;
 }
 #air {
-    margin-top: 6%;
-    margin-left: 16%;
-    margin-right: 12%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 #air .progress-container {
     width: 25%;
-    height: 430px;
+    height: 500px;
     text-align: center;
 }
 #air h1 {
@@ -189,24 +192,24 @@ span {
     margin-left: 40px;
     margin-right: 20px;
 }
-#humidity {
-    width: 50%;
-    float: right;
-}
-#humidity h1 {
-    margin-left: 40px;
-}
 #pm {
     width: 50%;
     float: left;
 }
 #pm h1 {
-    margin-left: 40px;
+    margin-left: 30px;
+}
+#humidity {
+    width: 50%;
+    float: right;
+}
+#humidity h1 {
+    margin-left: 30px;
 }
 .logos {
     text-align: center;
     position: relative;
-    top: 70px;
+    top: 50px;
 }
 .logos img {
     width: 18%;
