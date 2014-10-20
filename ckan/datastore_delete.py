@@ -6,7 +6,10 @@ import json
 import pprint
 
 resource_dict = {
+        # 点赞记录
         "resource_id": "03cf1c90-dc2e-44ad-9a6a-e5862fdfd57a",
+        # 关注者互动记录
+        # "resource_id": "61aab5bb-e5e2-455c-a4eb-77f504df1ce3",
         "force": True,
         # "filters": {"pm2.5": "201"}
     }

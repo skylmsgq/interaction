@@ -17,12 +17,26 @@ body {
     background: #25292D;
     color: #DDD;
     font-family: "Open Sans", sans-serif;
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 300;
     min-height: 640px;
     min-width: 1024px;
     /*max-width: 1280px;
   max-height: 768px;*/
+}
+#kexueguan {
+
+    width: 200px;
+}
+#ieaci {
+
+    width: 200px;
+}
+#kexuejia {
+    width: 200px;
+}
+#csw {
+    width: 200px;
 }
 .show {
     float: left;
@@ -32,14 +46,14 @@ body {
     margin-bottom: 20px;
 }
 span {
-    font-size: 270%;
+    font-size: 300%;
 }
 .word {
     letter-spacing: 3px;
 }
 .you {
     cursor: pointer;
-    font-size: 340%;
+    font-size: 330%;
     letter-spacing: 5px;
     color: #DA5D5D;
 }
@@ -47,8 +61,8 @@ span {
     border-radius: 10px;
 }
 .progress-container {
-    width: 28%;
-    height: 600px;
+    width: 30%;
+    height: 550px;
     margin-top: 30px;
     border: solid 1px #111;
     background: #151515;
@@ -56,6 +70,10 @@ span {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+}
+#lightProgress {
+    font-size: 40px;
+    color: #FFF;
 }
 .progress-container.done .progress {
     background: #0f9816;
@@ -134,7 +152,7 @@ span {
 .guide img {
     text-align: center;
     margin-left: 0px;
-    width: 500px;
+    width: 400px;
     margin-bottom: 10px;
 }
 .guide h3 {
@@ -142,11 +160,11 @@ span {
     font-size: 125%;
 }
 .guide ul {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 .guide ul li {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.2;
 }
 #light {
@@ -157,48 +175,49 @@ span {
     text-align: center;
 }
 #air {
-    margin-top: 6%;
-    margin-left: 16%;
-    margin-right: 12%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 #air .progress-container {
     width: 25%;
-    height: 430px;
+    height: 550px;
     text-align: center;
 }
 #air h1 {
-    font-size: 250%;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    font-size: 300%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 #air .airData {
     float: right;
 }
 #air .airData span {
-    font-size: 500%;
-    margin-left: 40px;
-    margin-right: 20px;
-}
-#humidity {
-    width: 50%;
-    float: right;
-}
-#humidity h1 {
-    margin-left: 40px;
+    font-size: 600%;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 #pm {
     width: 50%;
     float: left;
 }
 #pm h1 {
-    margin-left: 40px;
+    margin-left: 30px;
+}
+#humidity {
+    width: 50%;
+    float: right;
+}
+#humidity h1 {
+    margin-left: 30px;
 }
 .logos {
     text-align: center;
     position: relative;
-    top: 70px;
+    /*float: left;*/
+    top: 50px;
 }
-.logos img{
-    width: 18%;
+.logos img {
+    width: 20%;
     margin: 15px;
 }
