@@ -182,6 +182,8 @@ class wechatCallbackapiTest
                     break;
 
                 case 'image':
+                    $keyword = trim($postObj->PicUrl);
+                    $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, "text", $keyword);
                     break;
 
                 case 'voice':
