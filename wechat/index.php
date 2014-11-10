@@ -109,7 +109,7 @@ class wechatCallbackapiTest
                             $context = array(
                                 'http'=>array(
                                     'method'=>'POST',
-                                    'header'=>'Authorization: 954c00c0-b01a-4863-a75b-1ed238d38f35',
+                                    'header'=>'Authorization: a6c2ce2d-9e11-4be0-9ffb-ffe4966ed9e2',
                                     'content'=>$post_string)
                                 );
                             $stream_context = stream_context_create($context);
@@ -137,7 +137,7 @@ class wechatCallbackapiTest
                             $context = array(
                                 'http'=>array(
                                     'method'=>'POST',
-                                    'header'=>'Authorization: 954c00c0-b01a-4863-a75b-1ed238d38f35',
+                                    'header'=>'Authorization: a6c2ce2d-9e11-4be0-9ffb-ffe4966ed9e2',
                                     'content'=>$post_string)
                                 );
                             $stream_context = stream_context_create($context);
@@ -158,7 +158,7 @@ class wechatCallbackapiTest
                             $context = array(
                                 'http'=>array(
                                     'method'=>'POST',
-                                    'header'=>'Authorization: 954c00c0-b01a-4863-a75b-1ed238d38f35',
+                                    'header'=>'Authorization: a6c2ce2d-9e11-4be0-9ffb-ffe4966ed9e2',
                                     'content'=>$post_string)
                                 );
                             $stream_context = stream_context_create($context);
