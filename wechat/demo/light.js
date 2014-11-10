@@ -59,7 +59,7 @@ $(document).ready(function() {
                 dataType: 'json',
                 error: function() {},
                 success: function(data) {
-                    count = data['count'];
+                    count = data['count']*5;
                     if (count > 100) count = 100;
                     red = Math.round(17 + count * 1.95);
                     green = Math.round(75 - count * 0.25);
