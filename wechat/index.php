@@ -207,7 +207,7 @@ class wechatCallbackapiTest
     }
 
     public function simsim($keyword){
-        $key="09a78f17-c455-4422-90b6-efda56ac8d71";
+        $key="b7667b53-cbef-440b-916f-19ab106fe69e";
         $url_simsimi="http://sandbox.api.simsimi.com/request.p?key=".$key."&lc=ch&ft=0.0&text=".$keyword;
         $json=file_get_contents($url_simsimi);
         $result=json_decode($json,true);
