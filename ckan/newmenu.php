@@ -1,7 +1,7 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
 
-define("ACCESS_TOKEN", 'PMykLvLljp8y52AZKyaW0CncYBffvwn5f08ZQgntcNpvp_K-YSjw57UDxqD9-0fy8XGb6LOX1W-3C3fMEaoQHj88RsEW1SKcinEC4Wm2-_o');
+define("ACCESS_TOKEN", 'g4nJnz7iCI_Nq_J3vTcTTM2Z43bJly7gGApeqPYw28FZ9bIADdGKLxt-WU2mhZvFqrfFqQKHzFxj2u1BwiQ3G-LxV8spWjYdTf46Gru6tcg');
 
 //创建菜单
 function createMenu($data){
@@ -26,14 +26,33 @@ function createMenu($data){
 $data = '{
      "button":[
       {  
-          "type":"click",
-          "name":"我要加入",
-          "key":"join_us"
+        "type":"click",
+        "name":"加入我们",
+        "key":"join_us"
       },
       {  
-          "type":"click",
-          "name":"校园随手拍",
-          "key":"anyshoot"
+        "name":"校园随手拍",
+        "sub_button":[
+          {  
+            "type":"click",
+            "name":"修改昵称",
+            "key":"name"
+          },
+          {
+            "type":"click",
+            "name":"上传图片",
+            "key":"upload"
+          },
+          {
+            "type":"click",
+            "name":"说点什么",
+            "key":"words"
+          },
+          {
+            "type":"click",
+            "name":"使用帮助",
+            "key":"help"
+          }]
       }]
  }';
 

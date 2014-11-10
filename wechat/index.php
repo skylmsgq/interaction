@@ -104,7 +104,7 @@ class wechatCallbackapiTest
                         $keyword = rtrim($keyword, $subfix);
                         if (!($keyword=='') & $first){
                             $first = false;
-                            $post_string = '%7B%22records%22%3A%20%5B%7B%22OpenID%22%3A%20%22'.$fromUsername.'%22%2C%20%22发布时间%22%3A%20%22'.date('Y-m-d H:i:s',time()).'%22%2C%20%22评论内容%22%3A%20%22'.$keyword.'%22%7D%5D%2C%20%22force%22%3A%20true%2C%20%22method%22%3A%20%22insert%22%2C%20%22resource_id%22%3A%20%2261aab5bb-e5e2-455c-a4eb-77f504df1ce3%22%7D';
+                            $post_string = '%7B%22records%22%3A%20%5B%7B%22OpenID%22%3A%20%22'.$fromUsername.'%22%2C%20%22发布时间%22%3A%20%22'.date('Y-m-d H:i:s',time()).'%22%2C%20%22评论内容%22%3A%20%22'.$keyword.'%22%7D%5D%2C%20%22force%22%3A%20true%2C%20%22method%22%3A%20%22insert%22%2C%20%22resource_id%22%3A%20%22cb1a4853-cb1d-4a45-a036-28a283d85a60%22%7D';
                             $remote_server = 'http://202.121.178.242/api/3/action/datastore_upsert';
                             $context = array(
                                 'http'=>array(
@@ -132,7 +132,7 @@ class wechatCallbackapiTest
                             //$sql = "insert into user_state values('$fromUsername','','0','0','0','0','0','')";
                             //$mysql->runSql($sql);
 
-                            $post_string = '%7B%22records%22%3A%20%5B%7B%22OpenID%22%3A%20%22'.$fromUsername.'%22%2C%20%22关注时间%22%3A%20%22'.date('Y-m-d H:i:s',time()).'%22%7D%5D%2C%20%22force%22%3A%20true%2C%20%22method%22%3A%20%22insert%22%2C%20%22resource_id%22%3A%20%22d7c6b96c-7065-4e1f-9cae-70e2b9914be3%22%7D';
+                            $post_string = '%7B%22records%22%3A%20%5B%7B%22OpenID%22%3A%20%22'.$fromUsername.'%22%2C%20%22关注时间%22%3A%20%22'.date('Y-m-d H:i:s',time()).'%22%7D%5D%2C%20%22force%22%3A%20true%2C%20%22method%22%3A%20%22insert%22%2C%20%22resource_id%22%3A%20%2276a5de96-449a-4ea1-9dd8-56df92a32bfd%22%7D';
                             $remote_server = 'http://202.121.178.242/api/3/action/datastore_upsert';
                             $context = array(
                                 'http'=>array(
@@ -153,7 +153,7 @@ class wechatCallbackapiTest
                             //$sql = "delete from user_state where fromUsername='$fromUsername'";
                             //$mysql->runSql($sql);
 
-                            $post_string = '%7B%22force%22%3A%20true%2C%20%22filters%22%3A%20%7B%22OpenID%22%3A%20%22'.$fromUsername.'%22%7D%2C%20%22resource_id%22%3A%20%22d7c6b96c-7065-4e1f-9cae-70e2b9914be3%22%7D';
+                            $post_string = '%7B%22force%22%3A%20true%2C%20%22filters%22%3A%20%7B%22OpenID%22%3A%20%22'.$fromUsername.'%22%7D%2C%20%22resource_id%22%3A%20%2276a5de96-449a-4ea1-9dd8-56df92a32bfd%22%7D';
                             $remote_server = 'http://202.121.178.242/api/3/action/datastore_delete';
                             $context = array(
                                 'http'=>array(
